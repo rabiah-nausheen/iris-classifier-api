@@ -1,23 +1,24 @@
 # iris-classifier-api
 
-A FastAPI service to predict iris flower species (setosa, versicolour, virginica). Trained on an SVM model, and containerized with Docker.
+A FastAPI service to predict iris flower species (setosa, versicolor, virginica). Used an SVM classifier trained on the iris dataset and is containerized with Docker.
 
-##Installation
+## Installation
 
-Cloning the repository and building the Docker image:
+Clone the repository and build the Docker image:
 
 ```bash
-git clone https://github.com/yourname/iris-classifier-api.git
+git clone https://github.com/rabiah-nausheen/iris-classifier-api.git
 cd iris-classifier-api
 docker build -t iris-species-prediction-api .
 ```
 
-Usuage
+## Usage
 
 Start the container: 
 
 ```bash
 docker run -d -p 80:80 iris-species-prediction-api
+```
 
 Prediction request (PowerShell):
 
