@@ -13,8 +13,11 @@ data = load_iris(as_frame = True)
 df = data['data']
 target = data['target']
 
+#Change column names 
+df.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+
 #Selecting a few features
-selected_features = ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+selected_features = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
 X = df[selected_features]
 y = target 
 

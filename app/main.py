@@ -1,7 +1,7 @@
 # app/main.py
 
 from fastapi import FastAPI 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 import pickle 
 import os 
 
@@ -9,12 +9,10 @@ CLASS_NAMES = ["setosa", "versicolor", "virginica"]
 
 # Define the input schema using Pydantic 
 class InputData(BaseModel):
-    sepal_length: float = Field(..., alias="sepal length (cm)")
-    sepal_width: float = Field(..., alias="sepal width (cm)")
-    petal_length: float = Field(..., alias="petal length (cm)")
-    petal_width: float = Field(..., alias="petal width (cm)")
-
-    model_config = {"populate_by_name": True}
+    sepal_length: float 
+    sepal_width: float 
+    petal_length: float 
+    petal_width: float 
 
 # Initialize the FastAPI app 
 app = FastAPI(title = "Iris Species Prediction API")
